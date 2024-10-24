@@ -38,11 +38,11 @@ h2 {
 }
 
 .periodic-section {
-    width: 65%; /* 2/3 halaman */
-    float: left; /* Letakkan di sebelah kiri */
+    width: 65%; 
+    float: left;
     margin: 50px;
     margin-top: 60px;
-    box-sizing: border-box; /* Agar padding tidak mengganggu lebar total */
+    box-sizing: border-box;
 }
 
 /* Styling tabel periodik */
@@ -53,8 +53,8 @@ h2 {
     margin-left: 15px;
     width: 150%;
     display: grid;
-    grid-template-columns: repeat(18, 1fr); /* Tabel periodik memiliki 18 kolom */
-    gap: 0px; /* Jarak antar kotak unsur */
+    grid-template-columns: repeat(18, 1fr);
+    gap: 0px;
     overflow-x: scroll;
 }
 
@@ -207,7 +207,7 @@ button.element:nth-child(n+180):nth-child(-n+180) {
 
 /* Memperbesar simbol unsur */
 .symbol {
-    font-size: 20px; /* Ukuran simbol diperbesar */
+    font-size: 20px;
     font-weight: bold;
     margin: 0px;
 }
@@ -230,11 +230,11 @@ button.element:nth-child(n+180):nth-child(-n+180) {
 /* Styling untuk container detail unsur */
 .details-section {
     display: grid;
-    width: 35%; /* 1/3 halaman */
-    float: right; /* Letakkan di sebelah kanan */
+    width: 35%;
+    float: right;
     padding: 0px;
     background-color: #44A1A0;
-    height: 100vh; /* Membuatnya setinggi halaman */
+    height: 100vh;
     width: 561px;
     margin-top: 0px;
     margin-left: 50px;
