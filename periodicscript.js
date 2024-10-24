@@ -12,7 +12,7 @@ const elementsData = {
         name: 'Helium',
         sifat: 'Gas Mulia',
         symbol: 'He',
-        img:"https://storage.googleapis.com/search-ar-edu/periodic-table/element_002_helium/element_002_helium_srp_th.png",
+        img: "https://storage.googleapis.com/search-ar-edu/periodic-table/element_002_helium/element_002_helium_srp_th.png",
         atomicNumber: 2,
         atomicWeight: '4.0026'
     },
@@ -76,9 +76,76 @@ const elementsData = {
         name: 'Neon',
         sifat: 'Gas Mulia',
         symbol: 'Ne',
-        img: "https://storage.googleapis.com/search-ar-edu/periodic-table/element_010_neon/
-    }
+        img: "https://storage.googleapis.com/search-ar-edu/periodic-table/element_010_neon/element_010_neon_srp_th.png",
+        atomicNumber: 10,
+        atomicWeight: '20.180'
+    },
+    'Na': {
+        name: 'Sodium',
+        sifat: 'Logam Alkali',
+        symbol: 'Na',
+        img: "https://storage.googleapis.com/search-ar-edu/periodic-table/element_011_sodium/element_011_sodium_srp_th.png",
+        atomicNumber: 11,
+        atomicWeight: '22.990'
+    },
+    'Mg': {
+        name: 'Magnesium',
+        sifat: 'Logam Alkali Tanah',
+        symbol: 'Mg',
+        img: "https://storage.googleapis.com/search-ar-edu/periodic-table/element_012_magnesium/element_012_magnesium_srp_th.png",
+        atomicNumber: 12,
+        atomicWeight: '24.305'
+    },
+    'Al': {
+        name: 'Aluminium',
+        sifat: 'Logam Pasca Transisi',
+        symbol: 'Al',
+        img: "https://storage.googleapis.com/search-ar-edu/periodic-table/element_013_aluminium/element_013_aluminium_srp_th.png",
+        atomicNumber: 13,
+        atomicWeight: '26.982'
+    },
+    'Si': {
+        name: 'Silicon',
+        sifat: 'Metaloid',
+        symbol: 'Si',
+        img: "https://storage.googleapis.com/search-ar-edu/periodic-table/element_014_silicon/element_014_silicon_srp_th.png",
+        atomicNumber: 14,
+        atomicWeight: '28.085'
+    },
+    'P': {
+        name: 'Phosphorus',
+        sifat: 'Non-Logam',
+        symbol: 'P',
+        img: "https://storage.googleapis.com/search-ar-edu/periodic-table/element_015_phosphorus/element_015_phosphorus_srp_th.png",
+        atomicNumber: 15,
+        atomicWeight: '30.974'
+    },
+    'S': {
+        name: 'Sulfur',
+        sifat: 'Non-Logam',
+        symbol: 'S',
+        img: "https://storage.googleapis.com/search-ar-edu/periodic-table/element_016_sulfur/element_016_sulfur_srp_th.png",
+        atomicNumber: 16,
+        atomicWeight: '32.06'
+    },
+    'Cl': {
+        name: 'Chlorine',
+        sifat: 'Halogen',
+        symbol: 'Cl',
+        img: "https://storage.googleapis.com/search-ar-edu/periodic-table/element_017_chlorine/element_017_chlorine_srp_th.png",
+        atomicNumber: 17,
+        atomicWeight: '35.45'
+    },
+    'Ar': {
+        name: 'Argon',
+        sifat: 'Gas Mulia',
+        symbol: 'Ar',
+        img: "https://storage.googleapis.com/search-ar-edu/periodic-table/element_018_argon/element_018_argon_srp_th.png",
+        atomicNumber: 18,
+        atomicWeight: '39.948'
+    },
 };
+
 // Fungsi untuk menampilkan informasi elemen
 function showElementInfo(symbol) {
     const element = elementsData[symbol];
