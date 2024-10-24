@@ -1,0 +1,278 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0D5C63;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.header{
+    background-color: #247B7B;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fffffa;
+    font-size: 60px;
+    font-weight: 800;
+    text-align: center;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #fffffa;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #0D5C63;
+}
+/* Container utama dengan dua kolom: tabel periodik dan detail unsur */
+.container{
+    display: grid;
+    grid-template-columns: 65% 35%;  
+    height: 100vh;  
+    box-sizing: border-box;
+    gap: 100px;  
+    padding: 0px;
+}
+
+.periodic-section {
+    width: 65%; /* 2/3 halaman */
+    float: left; /* Letakkan di sebelah kiri */
+    margin: 50px;
+    margin-top: 60px;
+    box-sizing: border-box; /* Agar padding tidak mengganggu lebar total */
+}
+
+/* Styling tabel periodik */
+.periodic-table {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fffffa;
+    margin-left: 15px;
+    width: 150%;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr); /* Tabel periodik memiliki 18 kolom */
+    gap: 0px; /* Jarak antar kotak unsur */
+    overflow-x: scroll;
+}
+
+button.element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    border: 1px solid #53080800;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 1px;
+    border-radius: 10px;
+    aspect-ratio: 1;
+}
+
+button.element.non-logam{
+    background-color: #85cdfa;
+}
+button.element.non-logam:focus {
+    border: 3px solid #32ADFA;
+    outline: none;
+}
+button.element.non-logam:hover {
+    background-color: #7AADCC;
+}
+button.element.logam-alkali{
+    background-color: #e0ffff;
+}
+button.element.logam-alkali:focus {
+    border: 3px solid #8CFFFF;
+    outline: none;
+}
+button.element.logam-alkali:hover {
+    background-color: #EBFFFF;
+}
+button.element.alkali-tanah{
+    background-color: #f08080;
+}
+button.element.alkali-tanah:focus {
+    border: 3px solid #F06060;
+    outline: none;
+}
+button.element.alkali-tanah:hover {
+    background-color: #805959;
+}
+button.element.logam-transisi{
+    background-color: #e6e6fa
+}
+button.element.logam-transisi:focus {
+    border: 3px solid #AFAFFA;
+    outline: none;
+}
+button.element.logam-transisi:hover {
+    background-color: #5C5C73;
+}
+button.element.lantanida{
+    background-color: #b0c4de;
+}
+button.element.lantanida:focus {
+    border: 3px solid #5993DE;
+    outline: none;
+}
+button.element.lantanida:hover {
+    background-color: #596A80;
+}
+button.element.aktinida{
+    background-color: #ffa07a;
+}
+button.element.aktinida:focus {
+    border: 3px solid #FF804D;
+    outline: none;
+}
+button.element.aktinida:hover {
+    background-color: #804933;
+}
+button.element.unknown{
+    background-color: #D3D3D3;
+}
+button.element.unknown:focus {
+    border: 3px solid #7D7D7D;
+    outline: none;
+}
+button.element.unknown:hover {
+    background-color: #656565;
+}
+button.element.metaloid{
+    background-color: #fafad2;
+}
+button.element.metaloid:focus {
+    border: 3px solid #FFFF00;
+    outline: none;
+}
+button.element.metaloid:hover {
+    background-color: #85855A;
+}
+button.element.logam-pasca-transisi{
+    background-color: #90ee90;
+}
+button.element.logam-pasca-transisi:focus {
+    border: 3px solid #00FF00;
+    outline: none;
+}
+button.element.logam-pasca-transisi:hover {
+    background-color: #507950;
+}
+button.element.gas-mulia{
+    background-color: #ffb6c1;
+}
+button.element.gas-mulia:focus {
+    border: 3px solid #FF667D;
+    outline: none;
+}
+button.element.gas-mulia:hover {
+    background-color: #714F54;
+}
+button.element:nth-child(n+2):nth-child(-n+17) {
+    visibility: hidden;
+}
+
+button.element:nth-child(n+21):nth-child(-n+30) {
+    visibility: hidden;
+}
+button.element:nth-child(n+39):nth-child(-n+48) {
+    visibility: hidden;
+}
+
+button.element:nth-child(n+127):nth-child(-n+144) {
+    visibility: hidden;
+}
+
+button.element:nth-child(n+145):nth-child(-n+147) {
+    visibility: hidden;
+}
+
+button.element:nth-child(n+162):nth-child(-n+162) {
+    visibility: hidden;
+}
+
+button.element:nth-child(n+163):nth-child(-n+165) {
+    visibility: hidden;
+}
+
+button.element:nth-child(n+180):nth-child(-n+180) {
+    visibility: hidden;
+}
+
+
+/* Memperbesar simbol unsur */
+.symbol {
+    font-size: 20px; /* Ukuran simbol diperbesar */
+    font-weight: bold;
+    margin: 0px;
+}
+
+.number {
+    font-size: 10px;
+    margin: 0px;
+}
+
+.name {
+    font-size: 12px;
+    margin: 0px;
+    white-space: nowrap;        
+    overflow: hidden;           
+    text-overflow: ellipsis;    
+    width: 100%;                
+    display: block;           
+}
+
+/* Styling untuk container detail unsur */
+.details-section {
+    display: grid;
+    width: 35%; /* 1/3 halaman */
+    float: right; /* Letakkan di sebelah kanan */
+    padding: 0px;
+    background-color: #44A1A0;
+    height: 100vh; /* Membuatnya setinggi halaman */
+    width: 561px;
+    margin-top: 0px;
+    margin-left: 50px;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.element-details{
+    padding: 20px;
+    margin-top: -40px;
+    margin-left: 40px;
+    text-align: left;
+}
+#element-image{
+    width: 85%;
+    height: auto;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.element-details h1 {
+    font-size: 50px;
+    margin-bottom: 2px;
+}
+
+.element-details h2 {
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.element-details p {
+    color: #fffffa;
+    font-size: 18px;
+    margin: 5px 0;
+}
