@@ -70,7 +70,7 @@ submit.addEventListener('click', async function(event) {
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     console.log('User signed in:', userCredential.user);
-    window.location.href = 'index.html';
+    window.location.href = 'home.html';
   } catch (error) {
     console.error('Error signing in:', error);
   }

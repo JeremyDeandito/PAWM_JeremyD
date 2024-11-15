@@ -55,7 +55,7 @@ logout.addEventListener('click', async function(event) {
   signOut(auth).then(() => {
     // Sign-out successful.
     alert('Logout successful')
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
   }).catch((error) => {
     // An error happened.
     console.error('Logout error:', error);
