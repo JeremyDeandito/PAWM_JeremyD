@@ -1,7 +1,7 @@
 // Data elemen tabel periodik
 const elementsData = {
     'H': {
-        name: 'Hydrogen',
+        name: 'Hidrogen',
         sifat: 'Non-Logam',
         symbol: 'H',
         img: "https://storage.googleapis.com/search-ar-edu/periodic-table/element_001_hydrogen/element_001_hydrogen_srp_th.png",
@@ -151,11 +151,18 @@ function showElementInfo(symbol) {
     const element = elementsData[symbol];
 
     if (element) {
+        document.getElementById('default-message').style.display = 'none';
         document.getElementById('element-name').textContent = `${element.name}`;
         document.getElementById('element-sifat').textContent = `${element.sifat}`;
         document.getElementById('element-symbol').textContent = `Simbol: ${element.symbol}`;
         document.getElementById('element-image').src = element.img || '';
         document.getElementById('element-atomic-number').textContent = `Nomor Atom: ${element.atomicNumber}`;
         document.getElementById('element-atomic-weight').textContent = `Berat Atom: ${element.atomicWeight}`;
+
+        document.querySelectorAll('.element').forEach(el => el.classList.remove('selected'));
+        const selectedElement = document.querySelector(`.element[data-symbol="${symbol}"]`);
+        if (selectedElement) {
+            selectedElement.classList.add('selected');
+        }
     }
 }
