@@ -41,6 +41,7 @@ logout.addEventListener('click', async function(event) {
   const user = auth.currentUser;
   if (user) {
     const userState = getCurrentState();
+    userState.isReturningUser = true;
     try {
       await saveUserState(user.uid, userState);
     } catch (error) {

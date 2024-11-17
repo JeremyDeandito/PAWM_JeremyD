@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import { getFirestore, doc, getDoc , setDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB_I1Cb2A0tAfvWihigBvcfiZ4jh0kwzX0",
@@ -29,6 +29,7 @@ async function restoreUserState(userId) {
         showElementInfo(userState.selectedElement);
         selectElementButton(userState.selectedElement);
       }
+      updateGreetingText(userState.userName, userState.isReturningUser);
     } else {
       console.log('No user state found');
     }
@@ -42,6 +43,15 @@ function selectElementButton(symbol) {
   if (selectedElement) {
     selectedElement.classList.add('selected');
     selectedElement.click();
+  }
+}
+
+function updateGreetingText(userName, isReturningUser) {
+  const greetingText = document.getElementById('greeting-text');
+  if (isReturningUser) {
+    greetingText.textContent = `Welcome back, ${userName}!`;
+  } else {
+    greetingText.textContent = `Hello, ${userName}!`;
   }
 }
 
@@ -65,6 +75,12 @@ submit.addEventListener('click', async function(event) {
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     console.log('User signed in:', userCredential.user);
+    const userName = email.split('@')[0];
+    const userState = {
+      userName: userName,
+      isReturningUser: true
+    };
+    await setDoc(doc(db, 'userStates', userCredential.user.uid), userState, { merge: true });
     window.location.href = 'home.html';
   } catch (error) {
     console.error('Error signing in:', error);
