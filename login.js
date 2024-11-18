@@ -75,6 +75,7 @@ submit.addEventListener('click', async function(event) {
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     console.log('User signed in:', userCredential.user);
+    alert('Signed in successfully');
     const userName = email.split('@')[0];
     const userState = {
       userName: userName,
@@ -84,5 +85,6 @@ submit.addEventListener('click', async function(event) {
     window.location.href = 'home.html';
   } catch (error) {
     console.error('Error signing in:', error);
+    alert('Error signing in');
   }
 });
